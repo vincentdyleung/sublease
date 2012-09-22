@@ -42,6 +42,11 @@ Sublease::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
+  resources :residences do
+    member do
+      get 'new'
+    end
+  end
 
   # Sample resource route within a namespace:
   #   namespace :admin do
