@@ -5,7 +5,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:building) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
       <th><%= model_class.human_attribute_name(:person) %></th>
@@ -23,7 +22,6 @@
   <tbody>
     <% @residences.each do |residence| %>
       <tr>
-        <td><%= link_to residence.id, residence_path(residence) %></td>
         <td><%= residence.building %></td>
         <td><%= residence.address %></td>
         <td><%= residence.person %></td>
@@ -49,6 +47,4 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_residence_path,
-            :class => 'btn btn-primary' %>
+

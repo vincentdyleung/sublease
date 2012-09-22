@@ -56,10 +56,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="http://localhost:3000/residences/new">Sublet Your Home</a>
-		  <a class="brand" href="http://localhost:3000/residences">Find a Lease</a>
+          <a class="brand" href="http://localhost:3000">Sublettr</a>
           <div class="container nav-collapse">
-         
+             <ul class="nav">
+	            <li><a href="http://localhost:3000/residences/new">Sublet Your Home</a></li>
+            	<li><%= link_to "Find a Lease" , residences_path %></li>
+            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
