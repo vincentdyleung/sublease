@@ -1,3 +1,3 @@
 class Residence < ActiveRecord::Base
-  attr_accessible :address, :availability, :bathroom, :bedroom, :name, :num_people, :price
+  attr_accessible :address, :bathroom, :bedroom, :building, :capacity, :email, :end_date, :person, :phone, :start_date
 end
