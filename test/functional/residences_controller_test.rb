@@ -18,7 +18,7 @@ class ResidencesControllerTest < ActionController::TestCase
 
   test "should create residence" do
     assert_difference('Residence.count') do
-      post :create, residence: { address: @residence.address, availability: @residence.availability, bathroom: @residence.bathroom, bedroom: @residence.bedroom, name: @residence.name, num_people: @residence.num_people, price: @residence.price }
+      post :create, residence: { address: @residence.address, bathroom: @residence.bathroom, bedroom: @residence.bedroom, building: @residence.building, capacity: @residence.capacity, email: @residence.email, end_date: @residence.end_date, person: @residence.person, phone: @residence.phone, start_date: @residence.start_date }
     end
 
     assert_redirected_to residence_path(assigns(:residence))
@@ -35,7 +35,7 @@ class ResidencesControllerTest < ActionController::TestCase
   end
 
   test "should update residence" do
-    put :update, id: @residence, residence: { address: @residence.address, availability: @residence.availability, bathroom: @residence.bathroom, bedroom: @residence.bedroom, name: @residence.name, num_people: @residence.num_people, price: @residence.price }
+    put :update, id: @residence, residence: { address: @residence.address, bathroom: @residence.bathroom, bedroom: @residence.bedroom, building: @residence.building, capacity: @residence.capacity, email: @residence.email, end_date: @residence.end_date, person: @residence.person, phone: @residence.phone, start_date: @residence.start_date }
     assert_redirected_to residence_path(assigns(:residence))
   end
 

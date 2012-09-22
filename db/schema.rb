@@ -11,18 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120922024125) do
+ActiveRecord::Schema.define(:version => 20120922045955) do
 
   create_table "residences", :force => true do |t|
-    t.string   "name"
+    t.string   "building"
     t.string   "address"
-    t.decimal  "price",        :precision => 10, :scale => 0
-    t.date     "availability"
-    t.decimal  "bedroom",      :precision => 10, :scale => 0
-    t.decimal  "bathroom",     :precision => 10, :scale => 0
-    t.decimal  "num_people",   :precision => 10, :scale => 0
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.string   "person"
+    t.string   "email"
+    t.string   "phone"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.decimal  "bedroom",    :precision => 10, :scale => 0
+    t.decimal  "bathroom",   :precision => 10, :scale => 0
+    t.decimal  "capacity",   :precision => 10, :scale => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
 end

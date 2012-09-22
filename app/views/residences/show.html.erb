@@ -1,40 +1,39 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Residence -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @residence.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:building) %>:</strong></dt>
+  <dd><%= @residence.building %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @residence.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:person) %>:</strong></dt>
+  <dd><%= @residence.person %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @residence.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:phone) %>:</strong></dt>
+  <dd><%= @residence.phone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:start_date) %>:</strong></dt>
+  <dd><%= @residence.start_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:end_date) %>:</strong></dt>
+  <dd><%= @residence.end_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bedroom) %>:</strong></dt>
+  <dd><%= @residence.bedroom %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bathroom) %>:</strong></dt>
+  <dd><%= @residence.bathroom %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:capacity) %>:</strong></dt>
+  <dd><%= @residence.capacity %></dd>
+</dl>
 
-<p>
-  <b>Address:</b>
-  <%= @residence.address %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @residence.price %>
-</p>
-
-<p>
-  <b>Availability:</b>
-  <%= @residence.availability %>
-</p>
-
-<p>
-  <b>Bedroom:</b>
-  <%= @residence.bedroom %>
-</p>
-
-<p>
-  <b>Bathroom:</b>
-  <%= @residence.bathroom %>
-</p>
-
-<p>
-  <b>Num people:</b>
-  <%= @residence.num_people %>
-</p>
-
-
-<%= link_to 'Edit', edit_residence_path(@residence) %> |
-<%= link_to 'Back', residences_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              residences_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_residence_path(@residence), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              residence_path(@residence),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
