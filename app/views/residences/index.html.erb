@@ -15,7 +15,6 @@
       <th><%= model_class.human_attribute_name(:bedroom) %></th>
       <th><%= model_class.human_attribute_name(:bathroom) %></th>
       <th><%= model_class.human_attribute_name(:capacity) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -32,7 +31,6 @@
         <td><%= residence.bedroom %></td>
         <td><%= residence.bathroom %></td>
         <td><%= residence.capacity %></td>
-        <td><%=l residence.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_residence_path(residence), :class => 'btn btn-mini' %>
