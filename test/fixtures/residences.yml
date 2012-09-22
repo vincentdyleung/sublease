@@ -3,9 +3,17 @@
 one:
   name: MyString
   address: MyString
-  price: 
+  price: 9.99
+  availability: 2012-09-21
+  bedroom: 9.99
+  bathroom: 9.99
+  num_people: 9.99
 
 two:
   name: MyString
   address: MyString
-  price: 
+  price: 9.99
+  availability: 2012-09-21
+  bedroom: 9.99
+  bathroom: 9.99
+  num_people: 9.99

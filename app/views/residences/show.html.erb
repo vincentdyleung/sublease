@@ -15,6 +15,26 @@
   <%= @residence.price %>
 </p>
 
+<p>
+  <b>Availability:</b>
+  <%= @residence.availability %>
+</p>
+
+<p>
+  <b>Bedroom:</b>
+  <%= @residence.bedroom %>
+</p>
+
+<p>
+  <b>Bathroom:</b>
+  <%= @residence.bathroom %>
+</p>
+
+<p>
+  <b>Num people:</b>
+  <%= @residence.num_people %>
+</p>
+
 
 <%= link_to 'Edit', edit_residence_path(@residence) %> |
 <%= link_to 'Back', residences_path %>

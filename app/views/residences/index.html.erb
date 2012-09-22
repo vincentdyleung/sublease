@@ -5,6 +5,10 @@
     <th>Name</th>
     <th>Address</th>
     <th>Price</th>
+    <th>Availability</th>
+    <th>Bedroom</th>
+    <th>Bathroom</th>
+    <th>Num people</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +19,10 @@
     <td><%= residence.name %></td>
     <td><%= residence.address %></td>
     <td><%= residence.price %></td>
+    <td><%= residence.availability %></td>
+    <td><%= residence.bedroom %></td>
+    <td><%= residence.bathroom %></td>
+    <td><%= residence.num_people %></td>
     <td><%= link_to 'Show', residence %></td>
     <td><%= link_to 'Edit', edit_residence_path(residence) %></td>
     <td><%= link_to 'Destroy', residence, method: :delete, data: { confirm: 'Are you sure?' } %></td>

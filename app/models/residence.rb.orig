@@ -1,3 +1,7 @@
 class Residence < ActiveRecord::Base
+<<<<<<< HEAD
+  attr_accessible :address, :name, :price
+=======
   attr_accessible :address, :availability, :bathroom, :bedroom, :name, :num_people, :price
+>>>>>>> bootstrap
 end

@@ -18,7 +18,7 @@ class ResidencesControllerTest < ActionController::TestCase
 
   test "should create residence" do
     assert_difference('Residence.count') do
-      post :create, residence: { address: @residence.address, name: @residence.name, price: @residence.price }
+      post :create, residence: { address: @residence.address, availability: @residence.availability, bathroom: @residence.bathroom, bedroom: @residence.bedroom, name: @residence.name, num_people: @residence.num_people, price: @residence.price }
     end
 
     assert_redirected_to residence_path(assigns(:residence))
@@ -35,7 +35,7 @@ class ResidencesControllerTest < ActionController::TestCase
   end
 
   test "should update residence" do
-    put :update, id: @residence, residence: { address: @residence.address, name: @residence.name, price: @residence.price }
+    put :update, id: @residence, residence: { address: @residence.address, availability: @residence.availability, bathroom: @residence.bathroom, bedroom: @residence.bedroom, name: @residence.name, num_people: @residence.num_people, price: @residence.price }
     assert_redirected_to residence_path(assigns(:residence))
   end
 

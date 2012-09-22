@@ -5,12 +5,13 @@
 #   gem 'sqlite3'
 development:
   adapter: mysql2
-  encoding: utf8
   database: sublease
+  encoding: utf8
   username: sublease
   password: sublease
   host: vforvincent.info
-  port: 3306
+  pool: 5
+  timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
